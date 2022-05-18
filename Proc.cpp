@@ -26,7 +26,7 @@ int main(/*int argc, char* argv[]*/)
     Init_Container(C); //Инициализируем контейнер
 
     In_Container(C, ifst); //Записываем элементы в контейнер
-
+        
     //Проверка на полное заполнение контейнера до максимума
     if (C.Len == C.Max_len)
     {

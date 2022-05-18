@@ -1,4 +1,6 @@
 #include "Matrix.h"
+#include "Two_dimensional_array.h"
+#include "Diagonal_matrix.h"
 
 Matrix* In_Matrix(ifstream& ifst) {
     Matrix* M; //Создаем указатель на матрицу
@@ -46,5 +48,20 @@ void Out_Matrix(Matrix* M, ofstream& ofst) {
     else
     {
         ofst << "Incorrect element!" << endl;
+    }
+}
+
+int Sum_Matrix(Matrix* M) {
+    if (M->K == TWO_DIMENSIONAL_ARRAY)
+    {
+        return Sum_Two_dimensional_array(M->N, M->T_d_a); //Подсчет суммы элементов обычного двумерного массива
+    }
+    else if (M->K == DIAGONAL_MATRIX)
+    {
+        return Sum_Diagonal_matrix(M->N, M->D_m); //Подсчет суммы элементов диагональной матрицы
+    }
+    else
+    {
+        return -1;
     }
 }
