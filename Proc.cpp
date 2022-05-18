@@ -19,6 +19,7 @@ int main(/*int argc, char* argv[]*/)
     
     ifstream ifst("D:\\Univer\\Программирование\\Lab1\\Proc\\input.txt");
     ofstream ofst("D:\\Univer\\Программирование\\Lab1\\Proc\\output.txt");
+    
     cout << "Start" << endl;
 
     Container C; //Объявляем новый контейнер

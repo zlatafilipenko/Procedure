@@ -4,6 +4,7 @@
 #include "Key.h"
 #include "Diagonal_matrix.h"
 #include "Two_dimensional_array.h"
+#include "Triangular_matrix.h"
 
 //Структура "матрицы"
 struct Matrix {
@@ -14,6 +15,7 @@ struct Matrix {
     union {
         Diagonal_matrix D_m;
         Two_dimensional_array T_d_a;
+        Triangular_matrix T_m;
     };
 };
 
