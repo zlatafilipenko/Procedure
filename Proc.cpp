@@ -38,6 +38,8 @@ int main(/*int argc, char* argv[]*/)
 
     Out_Container(C, ofst); //Вывод контейнера
 
+    Out_Only_Two_Dim(C, ofst); //Вывод только двумерных массивов
+
     Clear_Container(C); //Очистка контейнера
 
     ofst << "Empty container. " << endl;

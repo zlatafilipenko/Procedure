@@ -3,7 +3,7 @@
 void In_Diagonal_matrix(int N, Diagonal_matrix& D_m, ifstream& ifst)
 {
     D_m.Array = new int[N]; //Выделяем память для диагональной матрицы
-    
+
     for (int i = 0; i < N; i++)
     {
         ifst >> D_m.Array[i]; //Записываем новый элемент в матрицу
