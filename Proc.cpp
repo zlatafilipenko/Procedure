@@ -37,6 +37,8 @@ int main(/*int argc, char* argv[]*/)
 
     ofst << "Filled container. " << endl;
 
+    Sort(C); //Сортировка контейнера
+
     Out_Container(C, ofst); //Вывод контейнера
 
     Clear_Container(C); //Очистка контейнера

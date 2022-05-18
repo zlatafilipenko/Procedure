@@ -25,4 +25,10 @@ Matrix* In_Matrix(ifstream& ifst);
 //Функция вывода матрица
 void Out_Matrix(Matrix* M, ofstream& ofst);
 
+//Функция подсчет суммы элементов матрицы
+int Sum_Matrix(Matrix* M);
+
+//Функция сравнения сумм элементов матриц
+bool Compare(Matrix* First, Matrix* Second);
+
 #endif //MATRIX_H

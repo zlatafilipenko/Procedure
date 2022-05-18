@@ -14,7 +14,7 @@ Matrix* In_Matrix(ifstream& ifst) {
         M->K = TWO_DIMENSIONAL_ARRAY; //Записываем тип матрицы
 
         ifst >> M->N; //Считываем размерность матрицы
-        
+
         In_Two_dimensional_array(M->N, M->T_d_a, ifst); //Считываем элементы матрицы
 
         return M;
@@ -25,7 +25,7 @@ Matrix* In_Matrix(ifstream& ifst) {
         M->K = DIAGONAL_MATRIX; //Записываем тип матрицы
 
         ifst >> M->N; //Считываем размерность матрицы
-        
+
         In_Diagonal_matrix(M->N, M->D_m, ifst); //Считываем элементы матрицы
 
         return M;
@@ -64,4 +64,24 @@ void Out_Matrix(Matrix* M, ofstream& ofst) {
     {
         ofst << "Incorrect element!" << endl;
     }
+}
+
+int Sum_Matrix(Matrix* M) {
+    if (M->K == TWO_DIMENSIONAL_ARRAY)
+    {
+        return Sum_Two_dimensional_array(M->N, M->T_d_a);
+    }
+    else if (M->K == DIAGONAL_MATRIX)
+    {
+        return Sum_Diagonal_matrix(M->N, M->D_m);
+    }
+    else
+    {
+        return -1;
+    }
+}
+
+bool Compare(Matrix* First, Matrix* Second)
+{
+    return Sum_Matrix(First) > Sum_Matrix(Second);
 }
