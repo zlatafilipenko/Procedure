@@ -37,11 +37,11 @@ int main(/*int argc, char* argv[] */ )
      
     cout << "Start" << endl;
 
-    Container C; //Объявляем новый контейнер
+    Container C; //Объявление нового контейнера
 
-    Init_Container(C); //Инициализируем контейнер
+    Init_Container(C); //Инициализация контейнера
 
-    In_Container(C, ifst); //Записываем элементы в контейнер
+    In_Container(C, ifst); //Запись элементов в контейнер
 
     //Проверка на полное заполнение контейнера до максимума
     if (C.Len == C.Max_len)
@@ -57,7 +57,9 @@ int main(/*int argc, char* argv[] */ )
     Out_Container(C, ofst); //Вывод контейнера
     cout << endl;
 
-    Out_Only_Two_Dim(C, ofst); //Вывод только обычного двумерного массива
+    Out_Only_Two_Dim(C, ofst); //Вывод только двумерного массива
+
+    Multi_Method(C, ofst); //Вызов мультиметода
 
     Clear_Container(C); //Очистка контейнера
 
