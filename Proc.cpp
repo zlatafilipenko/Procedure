@@ -5,7 +5,7 @@
 
 using namespace std;
 
-int main(/*int argc, char* argv[]*/)
+int main(/*int argc, char* argv[] */ )
 {/*
     if (argc != 3) {
         cout << "incorrect command line! "
@@ -14,12 +14,27 @@ int main(/*int argc, char* argv[]*/)
         exit(1);
     }
     ifstream ifst(argv[1]);
+
+    if (!ifst.is_open())
+    {
+        cout << "No input file found or could not open!" << endl;
+        system("pause");
+        return 1;
+    }
+
     ofstream ofst(argv[2]);
+
+    if (!ofst.is_open())
+    {
+        cout << "No output file found or could not open!" << endl;
+        system("pause");
+        return 1;
+    }
     */
     
     ifstream ifst("D:\\Univer\\Программирование\\Lab1\\Proc\\input.txt");
     ofstream ofst("D:\\Univer\\Программирование\\Lab1\\Proc\\output.txt");
-    
+     
     cout << "Start" << endl;
 
     Container C; //Объявляем новый контейнер
@@ -40,6 +55,7 @@ int main(/*int argc, char* argv[]*/)
     Sort(C); //Сортировка контейнера
 
     Out_Container(C, ofst); //Вывод контейнера
+    cout << endl;
 
     Out_Only_Two_Dim(C, ofst); //Вывод только обычного двумерного массива
 
